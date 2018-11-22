@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/info"
+            android:icon="@mipmap/my_info"
+            android:title="معلوماتي" />
+        <item
+            android:id="@+id/notification"
+            android:icon="@mipmap/notification"
+            android:title="اعدادات الاشعارات" />
+        <item
+            android:id="@+id/favorite"
+            android:icon="@mipmap/favorite"
+            android:title="المفضله" />
+        <item
+            android:id="@+id/home"
+            android:icon="@mipmap/home"
+            android:title="الرئيسيه" />
+
+        <item
+            android:id="@+id/info_for_use"
+            android:icon="@mipmap/info_app"
+            android:title="تعليمات الاستخدام" />
+        <item
+            android:id="@+id/report"
+            android:icon="@mipmap/report"
+            android:title="ابلاغ" />
+
+        <item
+            android:id="@+id/contact_with_us"
+            android:icon="@mipmap/mail"
+            android:title="تواصل معنا" />
+        <item
+            android:id="@+id/about_app"
+            android:icon="@mipmap/about_app"
+            android:title="عن التطبيق" />
+
+        <item
+            android:id="@+id/mark_app"
+            android:icon="@mipmap/mark_app"
+            android:title="تقيم التطبيق علي المتجر" />
+        <item
+            android:id="@+id/logOut"
+            android:icon="@mipmap/log_out"
+            android:title="تسجيل الخروج" />
+    </group>
+
+
+
+
+
+</menu>

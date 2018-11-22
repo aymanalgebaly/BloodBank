@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="11"
+    android:orientation="vertical"
+    android:background="@mipmap/ic_splash"
+    tools:context=".register.RegisterActivity">
+
+    <include layout="@layout/layout_top_bar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="الاسم"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_name"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/input_name"
+        android:hint="البريد الالكتروني"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_mail"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="تاريخ الميلاد"
+        android:layout_below="@+id/input_mail"
+        android:textColorHint="@color/gray"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:id="@+id/input_birthday"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/input_blood"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/input_birthday"
+        android:hint="فصيله الدم"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="رقم الهاتف"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/input_blood"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_phoneNum"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="كلمه المرور"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/input_phoneNum"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_password_regis"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="تاكيد كلمه المرور"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/input_password_regis"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_confirm_password"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="اخر تارخ للتبرع"
+        android:paddingRight="5dp"
+        android:layout_below="@id/input_confirm_password"
+        android:paddingLeft="5dp"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_lastDate"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <Spinner
+        android:id="@+id/custom_spinner_gov"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/input_lastDate"
+        android:layout_margin="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:background="@drawable/edit_style"
+         />
+
+    <Spinner
+        android:id="@+id/custom_spinner_city"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/custom_spinner_gov"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/confirm_register"
+        android:background="@color/blue_dark"
+        android:text="تسجيل"
+        android:layout_below="@id/custom_spinner_city"
+        android:textSize="22dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

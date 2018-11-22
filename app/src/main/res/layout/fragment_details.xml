@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame"
+    android:background="@color/white"
+    tools:context=".donationDetails.DetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel_details">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel_details_1">
+
+            <include layout="@layout/layout_top_bar_details"></include>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:id="@+id/rel_details_2"
+            android:layout_below="@id/rel_details_1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_text"
+                android:layout_margin="3dp"
+                android:text="الاسم : "
+                android:background="@drawable/edit_style_new"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/input_textAge"
+                android:layout_width="331dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/age_text"
+                android:layout_marginEnd="-3dp"
+                android:layout_toStartOf="@+id/age_text"
+                android:background="@drawable/edit_style_new"
+                android:paddingRight="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginRight="-3dp"
+                android:layout_toLeftOf="@+id/age_text" />
+
+            <TextView
+                android:id="@+id/input_textName"
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/edit_style_new"
+                android:paddingRight="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/input_textDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/details_text"
+                android:layout_marginTop="-3dp"
+                android:background="@drawable/edit_style_new"
+                android:paddingRight="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/input_textAddressHos"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/address_hospital"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/edit_style_new"
+                android:paddingRight="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/input_textHospital"
+                android:layout_width="281dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/hospital_text"
+                android:background="@drawable/edit_style_new"
+                android:paddingRight="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/input_textBags"
+                android:layout_width="208dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/many_bags"
+                android:background="@drawable/edit_style_new"
+                android:paddingRight="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/input_textBlood"
+                android:layout_width="286dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/blood"
+                android:background="@drawable/edit_style_new"
+                android:paddingRight="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_text"
+                android:layout_margin="3dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/age_text"
+                android:background="@drawable/edit_style_new"
+                android:text="العمر : "
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/age_text"
+                android:id="@+id/blood"
+                android:background="@drawable/edit_style_new"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="فصيله الدم : "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_alignParentRight="true"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/blood"
+                android:background="@drawable/edit_style_new"
+                android:text="عدد الاكياس المطلوبه : "
+                android:id="@+id/many_bags"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/many_bags"
+                android:layout_alignParentRight="true"
+                android:id="@+id/hospital_text"
+                android:layout_margin="3dp"
+                android:background="@drawable/edit_style_new"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="المستشفي : "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hospital_text"
+                android:layout_alignParentRight="true"
+                android:id="@+id/address_hospital"
+                android:layout_margin="3dp"
+                android:background="@drawable/edit_style_new"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="عنوان المستشفي : " />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/address_hospital"
+                android:id="@+id/phone_text"
+                android:background="@drawable/edit_style_new"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="رقم الجوال : "/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/phone_text"
+                android:id="@+id/details_text"
+                android:background="@drawable/edit_style_new"
+                android:text="التفاصيل : "
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="3dp"/>
+
+            <TextView
+                android:id="@+id/input_textPhone"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/phone_text"
+                android:background="@drawable/edit_style_new"
+                android:paddingRight="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/call_text"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:textSize="20sp"
+            android:text="اتصال"/>
+    </RelativeLayout>
+
+
+
+</FrameLayout>
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="governorate">
+        <item>اختر المحافظه...</item>
+        <item> الدقهليه</item>
+        <item> القاهره</item>
+        <item> الاسكندريه</item>
+        <item> البحر الاحمر</item>
+        <item> السويس</item>
+        <item> الاسماعيليه</item>
+        <item> جنوب سيناء</item>
+        <item> البحيره</item>
+        <item> شمال سيناء</item>
+        <item> الشرقيه</item>
+        <item> الغربيه</item>
+        <item> اسوان</item>
+        <item> الاقصر</item>
+        <item> الوادي الجديد</item>
+        <item> المنيا</item>
+        <item> اسيوط</item>
+        <item> سوهاج</item>
+        <item> قنا</item>
+        <item> الجيزه</item>
+        <item> مطروح</item>
+        <item> كفر الشيخ</item>
+        <item> بورسعيد</item>
+        <item> قليوبيه</item>
+        <item> دمياط</item>
+        <item> بني سويف</item>
+        <item>المنوفيه</item>
+        <item>المنوفيه</item>
+        <item>الفيوم</item>
+    </string-array>
+</resources>

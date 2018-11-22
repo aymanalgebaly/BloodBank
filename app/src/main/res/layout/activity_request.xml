@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="12"
+    tools:context=".donationRequest.RequestActivity">
+
+<include layout="@layout/layout_top_bar_request"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="الاسم"
+        android:textColorHint="@color/gray"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/input_name"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/input_name"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:hint="العمر"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_age"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="فصيله الدم"
+        android:layout_below="@id/input_age"
+        android:textColorHint="@color/gray"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/input_blood_type"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/input_blood_type"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/input_blood_bags"
+        android:hint="عدد الاكياس"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/input_blood_bags"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:hint="رقم الهاتف"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_phoneNum"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="اسم المستشفي"
+        android:textColorHint="@color/gray"
+        android:layout_below="@id/input_phoneNum"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/input_name_hos"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="عنوان المستشفي"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/input_name_hos"
+        android:textColorHint="@color/gray"
+        android:id="@+id/input_address_hos"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="ملاحظات..."
+        android:textColorHint="@color/gray"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/input_address_hos"
+        android:id="@+id/input_notes"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"/>
+
+    <Spinner
+        android:id="@+id/custom_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/input_notes"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_style"
+        />
+
+    <Spinner
+        android:id="@+id/custom_spinner_2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/custom_spinner"
+        android:background="@drawable/edit_style"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/custom_spinner_2"
+        android:id="@+id/send_request"
+        android:background="@color/blue_dark"
+        android:text="ارسال الطلب"
+        android:textSize="22dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

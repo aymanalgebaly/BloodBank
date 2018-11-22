@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settingsFace.ContactWithUsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/layout_top_bar_contact_us"></include>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_contact_us_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_contact_us">
+
+            <ImageView
+                android:id="@+id/image_contact_us"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/logo_contact_us" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_contact_us_3"
+            android:layout_width="match_parent"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_contact_us_2">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/mail"
+                android:background="@mipmap/mail" />
+
+            <TextView
+                android:id="@+id/text_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/mail"
+                android:text="البريد الالكتروني :"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_toLeftOf="@+id/mail" />
+
+            <TextView
+                android:id="@+id/mail_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/text_mail"
+                android:padding="3dp"
+                android:text="algebaly.aa@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_toLeftOf="@+id/text_mail" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_contact_us_2"
+            android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_contact_us_1">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/image_call"
+                android:background="@mipmap/black_call" />
+
+            <TextView
+                android:id="@+id/text_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/image_call"
+                android:text="الجوال :"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_toLeftOf="@+id/image_call" />
+
+            <TextView
+                android:id="@+id/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/text_phone"
+                android:padding="3dp"
+                android:text="021555585"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_toLeftOf="@+id/text_phone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/lin_contact_us"
+            android:paddingLeft="48dp"
+            android:layout_below="@id/rel_contact_us_3">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/facebook"
+                android:id="@+id/facebook"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/twitter"
+                android:id="@+id/twitter"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/youtube"
+                android:id="@+id/youtube"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/inista"
+                android:id="@+id/inista"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/whats"
+                android:id="@+id/whats"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/google"
+                android:layout_margin="10dp"
+                android:id="@+id/google"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel_button"
+            android:padding="5dp"
+            android:layout_below="@id/lin_contact_us">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/call_us"
+                android:background="@color/colorPrimaryDark"
+                android:text="تواصل معنا"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="7"
+            android:orientation="vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/rel_button">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="الاسم"
+                android:background="@drawable/white_gray_border_bottom"
+                android:id="@+id/edit_name"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_gray_border_bottom"
+                android:layout_weight="1"
+                android:hint="البريد الالكتروني"
+                android:id="@+id/edit_mail"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_gray_border_bottom"
+                android:layout_weight="1"
+                android:hint="الجوال"
+                android:id="@+id/edit_phone"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="عنوان الرساله"
+                android:background="@drawable/white_gray_border_bottom"
+                android:id="@+id/edit_subject"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="نص الرساله..."
+                android:background="@drawable/white_gray_border_bottom"
+                android:id="@+id/edit_text_subject"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/send"
+                android:text="ارسال"
+                android:textSize="15sp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

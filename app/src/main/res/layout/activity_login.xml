@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_splash"
+    tools:context=".login.LoginActivity">
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageLogin"
+            android:background="@drawable/ic_logoo_splash"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="218dp"
+        android:background="@drawable/edit_style"
+        android:ems="10"
+        android:hint="رقم الهاتف"
+        android:textColorHint="@color/gray"
+        android:inputType="textEmailAddress"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/gray"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:paddingRight="5dp"
+        android:layout_below="@id/input_email"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="252dp"
+        android:background="@drawable/edit_style"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="كلمه المرور"
+        android:inputType="textPassword"
+        android:layout_alignParentLeft="true" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/input_password"
+            android:layout_marginTop="-197dp"
+            android:text="تذكرني"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/textQues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/checkBox"
+        android:layout_alignParentStart="true"
+        android:text="هل نسيت كلمه المرور"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:id="@+id/imageQues"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_alignBottom="@+id/checkBox"
+        android:layout_toEndOf="@+id/textQues"
+        app:srcCompat="@mipmap/ic_ques"
+        android:layout_toRightOf="@+id/textQues" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="99dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="دخول"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/green"/>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="43dp"
+            android:text="انشاء حساب جديد"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/blue"/>
+
+
+
+</RelativeLayout>

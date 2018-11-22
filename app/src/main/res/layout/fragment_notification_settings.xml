@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notificationsSettings.NotificationSettingsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_notification_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_notification_settings_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rel_notification_settings"
+            android:layout_marginTop="15dp"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rel_notification_settings_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_gray_border">
+
+                <include layout="@layout/layout_top_bar_text"></include>
+
+                <CheckBox
+                    android:id="@+id/o_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="47dp"
+                    android:text="O+"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/ap_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/o_p"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/o_p"
+                    android:layout_marginTop="87dp"
+                    android:text="AB-"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/a_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/o_p"
+                    android:layout_centerHorizontal="true"
+                    android:text="A-"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/ap_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/a_n"
+                    android:layout_alignStart="@+id/a_n"
+                    android:layout_alignTop="@+id/ap_n"
+                    android:text="AB+"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/a_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/o_p"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginRight="11dp"
+                    android:text="A+"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/o_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/a_p"
+                    android:layout_alignRight="@+id/a_p"
+                    android:layout_alignTop="@+id/ap_n"
+                    android:text="O-"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_notification_settings_3"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/white_gray_border">
+
+                <include layout="@layout/layout_top_bar_city"></include>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_notificationsSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="43dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:text="حفظ"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</FrameLayout>
