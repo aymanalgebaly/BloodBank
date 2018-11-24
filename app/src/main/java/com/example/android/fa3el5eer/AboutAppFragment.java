@@ -52,19 +52,10 @@ public class AboutAppFragment extends Fragment {
 
         text = view.findViewById(R.id.about_app_text);
 
-        back = view.findViewById(R.id.back_aboutApp);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),HomeActivity.class);
-                startActivity(intent);
-
-            }
-        });
 
         Retrofit retrofit = RetrofitClient.getInstant();
         ContactUs_Api contactUs_api = retrofit.create(ContactUs_Api.class);
-        Call<ContactUsResponse> contactUsResponse = contactUs_api.getContactUsResponse(url,api_token);
+        Call<ContactUsResponse> contactUsResponse = contactUs_api.getContactUsResponse(api_token);
         contactUsResponse.enqueue(new Callback<ContactUsResponse>() {
             @Override
             public void onResponse(Call<ContactUsResponse> call, Response<ContactUsResponse> response) {

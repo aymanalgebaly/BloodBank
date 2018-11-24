@@ -1,5 +1,6 @@
 package com.example.android.fa3el5eer.register;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,8 +12,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.fa3el5eer.HomeActivity;
@@ -25,9 +28,12 @@ import com.example.android.fa3el5eer.gavernorates.Datum;
 import com.example.android.fa3el5eer.gavernorates.GavernoratesResponse;
 import com.example.android.fa3el5eer.gavernorates.Gavernorates_Api;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -38,12 +44,14 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
 
     private Boolean mAllowSelectionFiring = false;
     private Button button;
-    private EditText name, email, birth, blood, phone, pass, passConfirm, lastDateDonation;
+    private EditText name, email, blood, phone, pass, passConfirm;
+    private TextView birth, lastDateDonation;
     private Spinner spinner_city, spinner_gov;
     private String userName, userMail, userBirth, userBlood, userPhone, userPass, userPassConfirm, userLastDateDonation;
     private SharedPreferences preferences;
     public String api_token;
     private int governrate_id;
+    private Calendar myCalendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +70,60 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
         spinner_gov = findViewById(R.id.custom_spinner_gov);
         spinner_gov.setOnItemSelectedListener(this);
         spinner_city = findViewById(R.id.custom_spinner_city);
+        button = findViewById(R.id.confirm_register);
+
+
+        myCalendar = Calendar.getInstance();
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateDate();
+            }
+
+        };
+
+        birth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(RegisterActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+
+            }
+        });
+
+
+        final DatePickerDialog.OnDateSetListener donationDate = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updatedonationDate();
+            }
+
+        };
+
+
+        lastDateDonation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(RegisterActivity.this, donationDate, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+
+            }
+        });
+
         spinner_city.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -85,7 +147,6 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
 //
 //        itemList.setOnItemSelectedListener(this);
 
-        button = findViewById(R.id.confirm_register);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,10 +158,28 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
         viewGovernorates();
     }
 
+    private void updateDate() {
+
+        String myFormat = "yyyy-MM-dd"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        birth.setText(sdf.format(myCalendar.getTime()));
+
+    }
+
+    private void updatedonationDate() {
+
+        String myFormat = "yyyy-MM-dd"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        lastDateDonation.setText(sdf.format(myCalendar.getTime()));
+
+    }
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        governrate_id = spinner_gov.getSelectedItemPosition()+1;
+        governrate_id = spinner_gov.getSelectedItemPosition() + 1;
         Log.i("gov_id", String.valueOf(governrate_id));
         viewCities();
 
@@ -230,12 +309,11 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
     }
 
 
-
     public void sharedLogin() {
 
         SharedPreferences.Editor editor = getSharedPreferences("user", MODE_PRIVATE).edit();
 
-         preferences = getSharedPreferences("user",MODE_PRIVATE);
+        preferences = getSharedPreferences("user", MODE_PRIVATE);
 
         editor.putBoolean("login", true);
 

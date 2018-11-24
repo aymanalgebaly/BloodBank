@@ -44,6 +44,10 @@ public class ContactWithUsFragment extends Fragment {
     private String number,titleName,nameUser,emailTitle,phoneNumber,detailsTitle;
     private String api_token;
     private EditText title,name,email,phone,details;
+    private String email1,phone2,facebookUrl,twitterUrl,youtubeUrl,instagramUrl,whatsapp,googleUrl;
+
+
+
 
 
 
@@ -80,88 +84,79 @@ public class ContactWithUsFragment extends Fragment {
         sendBtn = view.findViewById(R.id.send);
 
 
+        getResponse();
 
 
-
-        Retrofit retrofit = RetrofitClient.getInstant();
-        ContactUs_Api contactUs_api = retrofit.create(ContactUs_Api.class);
-        Call<ContactUsResponse> contactUsResponse = contactUs_api.getContactUsResponse(url,api_token);
-        contactUsResponse.enqueue(new Callback<ContactUsResponse>() {
+        face.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(Call<ContactUsResponse> call, final Response<ContactUsResponse> response) {
-                if (response.body().getStatus() == 1){
-                    final String phone = response.body().getContactUsData().getPhone();
-                    phoneNum.setText(phone);
-                    String email = response.body().getContactUsData().getEmail();
-                    mail.setText(email);
-                    face.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String facebookUrl = response.body().getContactUsData().getFacebookUrl();
-                            Toast.makeText(getActivity(), facebookUrl, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    twitter.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String twitterUrl = response.body().getContactUsData().getTwitterUrl();
-                            Toast.makeText(getActivity(), twitterUrl, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    google.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String googleUrl = response.body().getContactUsData().getGoogleUrl();
-                            Toast.makeText(getActivity(), googleUrl, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    whats.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String whatsappUrl = response.body().getContactUsData().getWhatsapp();
-                            Toast.makeText(getActivity(), whatsappUrl, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    youtube.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String youtubeUrl = response.body().getContactUsData().getYoutubeUrl();
-                            Toast.makeText(getActivity(), youtubeUrl, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    instagram.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String instagramUrl = response.body().getContactUsData().getInstagramUrl();
-                            Toast.makeText(getActivity(), instagramUrl, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    callBtn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            number = phoneNum.getText().toString();
-
-
-                            int permissionCheck = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CALL_PHONE);
-
-                            if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-                                ActivityCompat.requestPermissions(
-                                        getActivity(),
-                                        new String[]{Manifest.permission.CALL_PHONE},
-                                        101);
-                            } else {
-                                startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse("tel:" + number)));
-                            }
-                        }
-                    });
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ContactUsResponse> call, Throwable t) {
-
+            public void onClick(View v) {
+              Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl));
+              startActivity(browserIntent);
             }
         });
+        twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent browserIntent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(twitterUrl));
+                startActivity(browserIntent1);
+            }
+        });
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent browserIntent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(googleUrl));
+                startActivity(browserIntent2);
+            }
+        });
+        whats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                Intent browserIntent3 = new Intent(Intent.ACTION_VIEW, Uri.parse(whatsapp));
+//                startActivity(browserIntent3);
+            }
+        });
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent browserIntent4 = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+                startActivity(browserIntent4);
+            }
+        });
+        instagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent browserIntent5 = new Intent(Intent.ACTION_VIEW, Uri.parse(instagramUrl));
+                startActivity(browserIntent5);
+            }
+        });
+
+
+        callBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                number = phoneNum.getText().toString();
+
+
+                int permissionCheck = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CALL_PHONE);
+
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(
+                            getActivity(),
+                            new String[]{Manifest.permission.CALL_PHONE},
+                            101);
+                } else {
+                    startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse("tel:" + number)));
+                }
+            }
+        });
+
+
+
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,6 +170,40 @@ public class ContactWithUsFragment extends Fragment {
 
 
         return view;
+    }
+
+    private void getResponse() {
+
+
+        Retrofit retrofit = RetrofitClient.getInstant();
+        ContactUs_Api contactUs_api = retrofit.create(ContactUs_Api.class);
+        Call<ContactUsResponse> contactUsResponse = contactUs_api.getContactUsResponse(api_token);
+        contactUsResponse.enqueue(new Callback<ContactUsResponse>() {
+            @Override
+            public void onResponse(Call<ContactUsResponse> call, final Response<ContactUsResponse> response) {
+                if (response.body().getStatus() == 1){
+
+                    ContactUsData contactUsData = response.body().getContactUsData();
+                    email1      = contactUsData.getEmail();
+                    phone2      = contactUsData.getPhone();
+                    facebookUrl = contactUsData.getFacebookUrl();
+                    googleUrl    = contactUsData.getGoogleUrl();
+                    instagramUrl = contactUsData.getInstagramUrl();
+                    twitterUrl   = contactUsData.getTwitterUrl();
+                    youtubeUrl   = contactUsData.getYoutubeUrl();
+                    whatsapp    = contactUsData.getWhatsapp();
+
+                    mail.setText(email1);
+                    phoneNum.setText(phone2);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ContactUsResponse> call, Throwable t) {
+
+            }
+        });
+
     }
 
     private void sendData() {

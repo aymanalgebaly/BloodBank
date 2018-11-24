@@ -14,21 +14,10 @@
 
 
         <RelativeLayout
-            android:id="@+id/rel_contact_us"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <include
-                android:id="@+id/include"
-                layout="@layout/layout_top_bar_contact_us"></include>
-
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/rel_contact_us_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rel_contact_us">
+            >
 
             <ImageView
                 android:id="@+id/image_contact_us"

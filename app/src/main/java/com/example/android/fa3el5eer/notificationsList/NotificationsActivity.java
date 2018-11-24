@@ -6,8 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.android.fa3el5eer.HomeActivity;
+import com.example.android.fa3el5eer.HomeFragment;
 import com.example.android.fa3el5eer.R;
 import com.example.android.fa3el5eer.RetrofitClient;
 import com.example.android.fa3el5eer.adapter.NotificationsAdapter;
@@ -28,11 +32,20 @@ public class NotificationsActivity extends AppCompatActivity {
     private Context context;
     private String url = "http://ipda3.com/blood-bank/api/v1/notifications?" +
             "api_token=Zz9HuAjCY4kw2Ma2XaA6x7T5O3UODws1UakXI9vgFVSoY3xUXYOarHX2VH27";
+    private ImageView back_img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
+
+        back_img = findViewById(R.id.back_img);
+        back_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NotificationsActivity.this, HomeActivity.class));
+            }
+        });
 
         recyclerView = findViewById(R.id.rv_notification);
 

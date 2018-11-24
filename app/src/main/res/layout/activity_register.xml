@@ -44,10 +44,11 @@
         android:background="@drawable/edit_style"
         android:layout_margin="5dp"/>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:hint="تاريخ الميلاد"
+        android:gravity="center|right"
         android:layout_below="@+id/input_mail"
         android:textColorHint="@color/gray"
         android:paddingRight="5dp"
@@ -104,10 +105,11 @@
         android:background="@drawable/edit_style"
         android:layout_margin="5dp"/>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:hint="اخر تارخ للتبرع"
+        android:gravity="center|right"
         android:paddingRight="5dp"
         android:layout_below="@id/input_confirm_password"
         android:paddingLeft="5dp"

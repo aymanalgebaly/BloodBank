@@ -6,19 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".notificationsList.NotificationsActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rel_notification"
-        >
 
-        <include layout="@layout/layout_top_bar_notofication"></include>
-    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/ic_splash"
-        android:layout_below="@id/rel_notification">
+        android:background="@mipmap/ic_splash">
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"

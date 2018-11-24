@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,261 +10,405 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rel_details">
+        android:background="@color/white">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rel_details_1">
 
-            <include layout="@layout/layout_top_bar_details"></include>
-        </RelativeLayout>
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="50dp"
-            android:id="@+id/rel_details_2"
-            android:layout_below="@id/rel_details_1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/name_text"
-                android:layout_margin="3dp"
-                android:text="الاسم : "
-                android:background="@drawable/edit_style_new"
-                android:layout_alignParentRight="true"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:id="@+id/input_textAge"
-                android:layout_width="331dp"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/age_text"
-                android:layout_marginEnd="-3dp"
-                android:layout_toStartOf="@+id/age_text"
-                android:background="@drawable/edit_style_new"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginRight="-3dp"
-                android:layout_toLeftOf="@+id/age_text" />
-
-            <TextView
-                android:id="@+id/input_textName"
-                android:layout_width="317dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-                android:layout_marginEnd="3dp"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/edit_style_new"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            app:layout_constraintTop_toTopOf="parent">
 
 
-            <TextView
-                android:id="@+id/input_textDetails"
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/details_text"
-                android:layout_marginTop="-3dp"
-                android:background="@drawable/edit_style_new"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_alignParentRight="true" />
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/input_textAddressHos"
-                android:layout_width="244dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/address_hospital"
-                android:layout_marginLeft="0dp"
-                android:layout_marginStart="0dp"
-                android:background="@drawable/edit_style_new"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:text="الاسم : "
+                    android:textColor="#212121"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/input_textHospital"
-                android:layout_width="281dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/hospital_text"
-                android:background="@drawable/edit_style_new"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/input_textBags"
-                android:layout_width="208dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/many_bags"
-                android:background="@drawable/edit_style_new"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_alignParentLeft="true" />
-
-            <TextView
-                android:id="@+id/input_textBlood"
-                android:layout_width="286dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/blood"
-                android:background="@drawable/edit_style_new"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_alignParentLeft="true" />
+                <TextView
+                    android:id="@+id/details_donate_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/name_text"
-                android:layout_margin="3dp"
-                android:layout_alignParentRight="true"
-                android:id="@+id/age_text"
-                android:background="@drawable/edit_style_new"
-                android:text="العمر : "
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/age_text"
-                android:id="@+id/blood"
-                android:background="@drawable/edit_style_new"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:text="فصيله الدم : "/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_alignParentRight="true"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_below="@id/blood"
-                android:background="@drawable/edit_style_new"
-                android:text="عدد الاكياس المطلوبه : "
-                android:id="@+id/many_bags"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/many_bags"
-                android:layout_alignParentRight="true"
-                android:id="@+id/hospital_text"
-                android:layout_margin="3dp"
-                android:background="@drawable/edit_style_new"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:text="المستشفي : "/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/hospital_text"
-                android:layout_alignParentRight="true"
-                android:id="@+id/address_hospital"
-                android:layout_margin="3dp"
-                android:background="@drawable/edit_style_new"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="عنوان المستشفي : " />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/address_hospital"
-                android:id="@+id/phone_text"
-                android:background="@drawable/edit_style_new"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:text="رقم الجوال : "/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/phone_text"
-                android:id="@+id/details_text"
-                android:background="@drawable/edit_style_new"
-                android:text="التفاصيل : "
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_margin="3dp"/>
-
-            <TextView
-                android:id="@+id/input_textPhone"
-                android:layout_width="275dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/phone_text"
-                android:background="@drawable/edit_style_new"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_name"></View>
 
 
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:text="العمر : "
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:id="@+id/call_text"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:background="@color/green"
-            android:textSize="20sp"
-            android:text="اتصال"/>
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/details_donate_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toStartOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_name" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_age"></View>
+
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+
+                    android:paddingStart="10dp"
+                    android:text="فصيلة الدم : "
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toEndOf="@+id/view"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/details_donate_blodeType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_age" />
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_blodeType"></View>
+
+
+                <TextView
+                    android:id="@+id/bags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:hint="عدد  الاكياس المطلوبة : "
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_blodeType"></TextView>
+
+
+                <TextView
+                    android:id="@+id/details_donate_bags_numbers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintBottom_toBottomOf="@+id/hospital_name"
+                    app:layout_constraintEnd_toStartOf="@+id/bags"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_blodeType"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bags"></View>
+
+
+                <TextView
+                    android:id="@+id/hos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:hint="اسم المستشفي : "
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bags" />
+
+                <TextView
+                    android:id="@+id/hospital_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toStartOf="@+id/hos"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_bags_numbers" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hospital_name"></View>
+
+
+                <TextView
+                    android:id="@+id/hosAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="start|center"
+                    android:hint="عنوان المستشفي : "
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hospital_name" />
+
+
+                <TextView
+                    android:id="@+id/hospital_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toStartOf="@+id/hosAdd"
+                    app:layout_constraintTop_toBottomOf="@+id/hospital_name" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hospital_address"></View>
+
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:text="رقم الهاتف : "
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hosAdd" />
+
+                <TextView
+                    android:id="@+id/details_donate_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|center"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/hosAdd" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_phone"></View>
+
+
+                <TextView
+                    android:id="@+id/details_donate_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#212121"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_phone" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_notes"></View>
+
+
+                <Button
+                    android:id="@+id/ask_donate_call_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/green"
+                    android:text="اتصال"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="5.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_donate_notes" />
+            </android.support.constraint.ConstraintLayout>
+
+
+        </ScrollView>
+
+
+
+    </android.support.constraint.ConstraintLayout>
 
 
 

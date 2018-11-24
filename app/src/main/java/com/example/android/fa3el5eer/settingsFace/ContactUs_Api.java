@@ -11,7 +11,8 @@ import retrofit2.http.Url;
 public interface ContactUs_Api {
 
     @GET("settings")
-    Call<ContactUsResponse>getContactUsResponse(@Query("url") String url,@Query("api_token") String api_token);
+    Call<ContactUsResponse> getContactUsResponse(
+            @Query("api_token") String api_token);
 
     @FormUrlEncoded
     @POST("contact")

@@ -11,24 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rel_favorite">
-
-        <include layout="@layout/layout_top_bar_favorite"></include>
-    </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@mipmap/ic_splash"
-            android:layout_below="@id/rel_favorite">
+            >
 
             <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/rv_favorite"></android.support.v7.widget.RecyclerView>
+                android:id="@+id/rv_favorite">
+
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
 
     </RelativeLayout>

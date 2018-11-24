@@ -12,15 +12,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/rel_aboutApp">
-
-        <include layout="@layout/layout_top_bar_about_app"></include>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/rel_aboutApp">
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="match_parent"

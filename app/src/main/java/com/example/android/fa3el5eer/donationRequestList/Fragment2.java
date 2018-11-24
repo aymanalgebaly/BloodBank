@@ -1,7 +1,9 @@
 package com.example.android.fa3el5eer.donationRequestList;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -33,6 +35,7 @@ public class Fragment2 extends Fragment {
     private String blood_type = "A-";
     private String city_id = "1";
     private String url = "http://ipda3.com/blood-bank/api/v1/donation-requests?";
+    private Button call_btn;
 
 
     private Button details;
@@ -49,6 +52,7 @@ public class Fragment2 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_fragment2, container, false);
 
+        call_btn = view.findViewById(R.id.call);
         recyclerView = view.findViewById(R.id.rv2);
         preferences = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         api_token = preferences.getString("api_token",api_token);
@@ -118,6 +122,7 @@ public class Fragment2 extends Fragment {
         adapter = new RequestAdapter(getActivity());
         recyclerView.setAdapter(adapter);
     }
+
 
     private void onTouchAdapter(){
         adapter.onItemClickedListner(new RequestAdapter.onItemClickListner() {
